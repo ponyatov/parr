@@ -1,4 +1,8 @@
 {
+    "python.pythonPath": "./bin/python3",
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Path": "./bin/autopep8",
+    "python.formatting.autopep8Args": ["--ignore=E26,E302,E401,E402"],
 
     "multiCommand.commands": [
         {
@@ -23,16 +27,16 @@
 
     // ignore large files for VSCode sync
     "files.watcherExclude": {
-        // "**/bin/**": true, "**/include/**":true, "**/lib*/**":true,
-        // "**/share/**":true, "**/*.pyc": true,
-        // "**/docs/**":true,
+        "**/bin/**": true, "**/include/**":true, "**/lib*/**":true,
+        "**/share/**":true, "**/*.pyc": true,
         // "**/buildroot-*/**": true,
         // "**/firmware/**": true,
     },
 
     "files.exclude": {
-        // "bin": true, "include":true, "lib*":true, "share":true,
-        // "pyvenv.cfg":true, "**/*.pyc": true,
+        // "bin": true, 
+        "include":true, "lib*":true, "share":true,
+        "pyvenv.cfg":true, "**/*.pyc": true,
         // "**/docs/**":true,
     },
 
@@ -41,6 +45,6 @@
     "files.associations": {
         // "**/templates/*.html": "django-html",
         // "**/templates/*": "django-txt",
-        // "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
 }
